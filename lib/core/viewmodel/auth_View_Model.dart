@@ -101,8 +101,8 @@ class AuthViewModel extends GetxController {
 
     try {
   await FirebaseAuth.instance.createUserWithEmailAndPassword(
-    email: email!,
-    password: password!,
+    email: email! ,
+    password: password! ,
 
   // ).then((user) async { 
   // UserModel userModel = UserModel(
@@ -119,6 +119,7 @@ class AuthViewModel extends GetxController {
   ).then((value) async {
   
     saveUser(value) ;
+    
 
   } 
   
@@ -157,8 +158,6 @@ class AuthViewModel extends GetxController {
     )  ; 
     await FirestoreUser().AddUsertoFirestore(userModel); 
     setUser(userModel) ; 
-
-
   }
 
   void setUser (UserModel userModel) async {
